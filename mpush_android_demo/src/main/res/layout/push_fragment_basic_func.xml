@@ -22,7 +22,7 @@
             android:src="@mipmap/push_logo"
             android:contentDescription="@string/push_logo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvHello"
@@ -45,7 +45,7 @@
             android:textSize="14sp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="@id/tvHello"
-            app:layout_constraintTop_toBottomOf="@id/tvHello"/>
+            app:layout_constraintTop_toBottomOf="@id/tvHello" />
         
         <TextView
             android:id="@+id/tvRegister"
@@ -60,7 +60,7 @@
             android:onClick="@{()-> viewModel.register()}"
             android:layout_marginHorizontal="16dp"
             android:background="@drawable/push_shape_btn"
-            app:layout_constraintTop_toBottomOf="@+id/ivLogo"/>
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clChannel"

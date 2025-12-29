@@ -69,6 +69,15 @@ android {
         buildConfig = true
     }
 
+    // Added to try and fix data binding caching issues
+    dataBinding {
+        enabled = true
+    }
+}
+
+kapt {
+    // Disable incremental KAPT processing to avoid caching issues
+    // incremental = false
 }
 
 dependencies {

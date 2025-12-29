@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.alibaba.sdk.android.push.CloudPushService
 import com.alibaba.sdk.android.push.CommonCallback
@@ -21,23 +22,23 @@ class BasicFuncViewModel(application: Application): AndroidViewModel(application
         const val RESPONSE_CHANNEL_OPEN = "on"
     }
 
-    val channelState = SingleLiveData<Boolean>().apply { value = false }
+    val channelState = MutableLiveData<Boolean>().apply { value = false }
 
-    val divideGroupState = SingleLiveData<Boolean>().apply { value = false }
+    val divideGroupState = MutableLiveData<Boolean>().apply { value = false }
 
-    val msgReceiveByService = SingleLiveData<Boolean>().apply { value = false }
+    val msgReceiveByService = MutableLiveData<Boolean>().apply { value = false }
 
-    val logLevel = SingleLiveData<Int>().apply { value = CloudPushService.LOG_OFF }
+    val logLevel = MutableLiveData<Int>().apply { value = CloudPushService.LOG_OFF }
 
     private val pushService = PushServiceFactory.getCloudPushService()
 
-    var tempLogLevel = SingleLiveData<Int>().apply { value = CloudPushService.LOG_OFF }
+    var tempLogLevel = MutableLiveData<Int>().apply { value = CloudPushService.LOG_OFF }
 
-    var hasRegistered = SingleLiveData<Boolean>().apply { value = false }
+    var hasRegistered = MutableLiveData<Boolean>().apply { value = false }
 
-    var registerBtnText = SingleLiveData<String>()
+    var registerBtnText = MutableLiveData<String>()
 
-    val registerBtnAlpha = SingleLiveData<Float>().apply { value = 1.0f }
+    val registerBtnAlpha = MutableLiveData<Float>().apply { value = 1.0f }
 
     var showCustomToast: ((String, Int) ->Unit)? = null
 

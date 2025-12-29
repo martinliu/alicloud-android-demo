@@ -1,4 +1,4 @@
-package com.alibaba.httpdns.android.demo
+package com.alibaba.push.android.demo
 
 import android.util.Log
 import androidx.annotation.MainThread
