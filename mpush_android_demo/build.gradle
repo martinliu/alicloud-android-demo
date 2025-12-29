@@ -10,6 +10,7 @@ gradle.ext {
 }
 
 android {
+    namespace 'com.alibaba.push.android.demo'
     compileSdk 34
     defaultConfig {
         applicationId "com.aliyun.emas.pocdemo"
@@ -23,6 +24,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
     signingConfigs {
         release {
@@ -50,10 +54,8 @@ android {
             signingConfig signingConfigs.debugConfig
         }
     }
-    android {
-        lintOptions {
-            abortOnError false
-        }
+    lint {
+        abortOnError false
     }
     sourceSets {
         main {
@@ -64,6 +66,7 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
+        buildConfig = true
     }
 
 }
@@ -92,4 +95,3 @@ dependencies {
     api "com.aliyun.ams:alicloud-android-third-push-fcm:${gradle.thirdPushVersion}"
 
 }
-

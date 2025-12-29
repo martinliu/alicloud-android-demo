@@ -24,7 +24,7 @@ open class BaseFragment: Fragment() {
         }
         toastTimerTask?.cancel()
         if (toastDialog == null) {
-            toastDialog = AlertDialog.Builder(requireContext(), R.style.Theme_AppCompat_Dialog_Alert).create()
+            toastDialog = AlertDialog.Builder(requireContext(), androidx.appcompat.R.style.Theme_AppCompat_Dialog_Alert).create()
             toastBinding = ToastDialogBinding.inflate(LayoutInflater.from(requireContext()), null, false)
             toastBinding?.tvMessage?.text = message
             toastBinding?.ivIcon?.setImageResource(icon)

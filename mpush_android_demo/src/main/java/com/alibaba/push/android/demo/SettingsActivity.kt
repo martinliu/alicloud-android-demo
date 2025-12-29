@@ -60,11 +60,11 @@ class SettingsActivity : AppCompatActivity() {
         if (Config.hasUserConfig(this)) {
             binding.etAppKey.setText(Config.APP_KEY)
             binding.etAppSecret.setText(Config.APP_SECRET)
-            binding.tvStatus.text = "当前使用用户配置"
+            binding.tvStatus.text = getString(R.string.settings_status_user_config)
         } else {
             binding.etAppKey.setText(Config.APP_KEY)
             binding.etAppSecret.setText(Config.APP_SECRET)
-            binding.tvStatus.text = "当前使用默认配置"
+            binding.tvStatus.text = getString(R.string.settings_status_default_config)
         }
     }
 
@@ -73,12 +73,12 @@ class SettingsActivity : AppCompatActivity() {
         val appSecret = binding.etAppSecret.text.toString().trim()
 
         if (TextUtils.isEmpty(appKey) || TextUtils.isEmpty(appSecret)) {
-            Toast.makeText(this, "AppKey和AppSecret不能为空", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.settings_app_key_secret_empty), Toast.LENGTH_SHORT).show()
             return
         }
 
         Config.saveUserConfig(this, appKey, appSecret)
-        Toast.makeText(this, "配置保存成功！正在重启应用...", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.settings_save_success_restart), Toast.LENGTH_SHORT).show()
         
         // 延迟重启，让Toast显示
         binding.btnSave.postDelayed({
@@ -89,7 +89,7 @@ class SettingsActivity : AppCompatActivity() {
     private fun clearConfig() {
         Config.clearUserConfig(this)
         loadCurrentConfig()
-        Toast.makeText(this, "用户配置已清除，将使用默认配置", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.settings_user_config_cleared), Toast.LENGTH_SHORT).show()
     }
 
     private fun restartApp() {

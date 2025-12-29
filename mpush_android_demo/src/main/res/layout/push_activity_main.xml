@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:title="阿里云推送演示"
+            app:title="@string/app_title"
             app:titleTextColor="@android:color/white"
             app:layout_constraintTop_toTopOf="parent" />
 

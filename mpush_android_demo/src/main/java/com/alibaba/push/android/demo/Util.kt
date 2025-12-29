@@ -78,7 +78,7 @@ fun Context.showInputDialog(
  */
 fun Context.showMessageDialog(messageTitle: String?, messageContent: String?, messageId: String?, traceInfo: String?) {
 
-    val mAlertDialog = AlertDialog.Builder(this, R.style.Theme_AppCompat_Dialog_Alert).create()
+    val mAlertDialog = AlertDialog.Builder(this, androidx.appcompat.R.style.Theme_AppCompat_Dialog_Alert).create()
 
     val binding = MessageShowDialogBinding.inflate(LayoutInflater.from(this), null, false)
     binding.title = String.format(getString(R.string.push_message_title), messageTitle)
@@ -176,4 +176,3 @@ fun Context.showBindDialog(
         dialog.dismiss()
     }
 }
-

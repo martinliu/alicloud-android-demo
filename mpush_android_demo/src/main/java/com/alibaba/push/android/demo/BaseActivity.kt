@@ -21,7 +21,7 @@ open class BaseActivity : Activity() {
     fun showCustomToast(message: String, icon: Int) {
         toastTimerTask?.cancel()
         if (toastDialog == null) {
-            toastDialog = AlertDialog.Builder(this, R.style.Theme_AppCompat_Dialog_Alert).create()
+            toastDialog = AlertDialog.Builder(this, androidx.appcompat.R.style.Theme_AppCompat_Dialog_Alert).create()
             toastBinding = ToastDialogBinding.inflate(LayoutInflater.from(this), null, false)
             toastBinding?.tvMessage?.text = message
             toastBinding?.ivIcon?.setImageResource(icon)
