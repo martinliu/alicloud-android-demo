@@ -46,33 +46,29 @@ To make the Demo App run properly, you also need to configure your appkey/appsec
 
 >[How to get your AppKey / AppSecret](https://help.aliyun.com/document_detail/436513.html?spm=a2c4g.11186623.0.0.613342899Kvoah#aa691d4160wc4)
 
-Replace the `********` placeholders in the following `AndroidManifest.xml` snippet with your appkey/appsecret.
-
-```xml
-<meta-data android:name="com.alibaba.app.appkey" android:value="********"/> <!-- Please fill in your appKey -->
-<meta-data android:name="com.alibaba.app.appsecret" android:value="********"/> <!-- Please fill in your appSecret -->
-```
+Update the values in `mpush_android_demo/src/main/AndroidManifest.xml` and `mpush_android_demo/src/main/assets/aliyun-emas-services.json`.
 
 #### 3.2 Configure the Package Name
 
-Change the `applicationId` parameter in the `build.gradle` file to the package name of the created App:
+Change the `applicationId` parameter in `mpush_android_demo/build.gradle` to the package name of the created App.
 
-```gradle
-android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+#### 3.3 Manual Configuration Checklist
 
-    defaultConfig {
-        applicationId "********" // Fill in the package name of the created App
-        minSdkVersion 11
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
-        
-    }
-    ......
-}
-```
+| Variable | Description | File | Example Value |
+| --- | --- | --- | --- |
+| com.alibaba.app.appkey | Alibaba Cloud Mobile Push AppKey | mpush_android_demo/src/main/AndroidManifest.xml | 12345678 |
+| com.alibaba.app.appsecret | Alibaba Cloud Mobile Push AppSecret | mpush_android_demo/src/main/AndroidManifest.xml | abcdef1234567890 |
+| com.huawei.hms.client.appid | Huawei Push App ID | mpush_android_demo/src/main/AndroidManifest.xml | appid=1234567890123456789 |
+| com.vivo.push.api_key | vivo Push API Key | mpush_android_demo/src/main/AndroidManifest.xml | 1234567890abcdef |
+| com.vivo.push.app_id | vivo Push App ID | mpush_android_demo/src/main/AndroidManifest.xml | 1234567890 |
+| com.hihonor.push.app_id | Honor Push App ID | mpush_android_demo/src/main/AndroidManifest.xml | 1234567890123456789 |
+| push.appkey | Alibaba Cloud Mobile Push AppKey (assets) | mpush_android_demo/src/main/assets/aliyun-emas-services.json | 12345678 |
+| push.appsecret | Alibaba Cloud Mobile Push AppSecret (assets) | mpush_android_demo/src/main/assets/aliyun-emas-services.json | abcdef1234567890 |
+| applicationId | Android applicationId (package name) | mpush_android_demo/build.gradle | com.aliyun.emas.pocdemo |
+| storeFile | Signing keystore file | mpush_android_demo/build.gradle | Test.jks |
+| storePassword | Signing keystore password | mpush_android_demo/build.gradle | test1234 |
+| keyAlias | Signing key alias | mpush_android_demo/build.gradle | test |
+| keyPassword | Signing key password | mpush_android_demo/build.gradle | test1234 |
 
 ### 4. Run the Program
 
