@@ -1,5 +1,7 @@
 # EMAS Android Demo
 
+[English Version](README.md)
+
 阿里巴巴应用研发平台（Enterprise Mobile Application Studio，简称EMAS），是面向全端场景（移动App、H5应用、小程序、Web应用、PC应用等）的一站式应用研发平台。EMAS基于广泛的云原生技术（Backend as a Service、Serverless、DevOps、低代码等），致力于为企业、开发者提供一站式的应用研发运营管理服务，涵盖开发、测试、运维、运营等应用全生命周期。
 
 ## 快速开始

@@ -1,5 +1,7 @@
 # EMAS Android Demo
 
+[Chinese Version](README.zh.md)
+
 Alibaba Cloud Enterprise Mobile Application Studio (EMAS) is a one-stop application R&D platform for full-scenario endpoints (mobile apps, H5 apps, mini programs, web apps, PC apps, etc.). Based on widely adopted cloud-native technologies (Backend as a Service, Serverless, DevOps, low-code, etc.), EMAS provides enterprises and developers with one-stop application development, operations, and management services across the full application lifecycle, covering development, testing, operations, and user growth.
 
 ## Quick Start
