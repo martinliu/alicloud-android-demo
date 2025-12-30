@@ -5,6 +5,7 @@ plugins {
 }
 
 gradle.ext {
+    // Keep push SDK versions centralized for consistent upgrades.
     pushVersion = '3.9.2'
     thirdPushVersion = '3.9.2'
 }
@@ -13,6 +14,7 @@ android {
     namespace 'com.alibaba.push.android.demo'
     compileSdk 34
     defaultConfig {
+        // Ensure this matches the PackageName registered in EMAS.
         applicationId "com.aliyun.emas.pocdemo"
         minSdkVersion 21
         targetSdkVersion 34
@@ -64,6 +66,7 @@ android {
     }
 
     buildFeatures {
+        // Required to access BuildConfig.PUSH_VERSION in code.
         viewBinding = true
         dataBinding = true
         buildConfig = true
@@ -91,16 +94,19 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
     implementation("androidx.viewpager2:viewpager2:1.0.0")
 
+    // Core Aliyun Mobile Push SDK (required).
     implementation "com.aliyun.ams:alicloud-android-push:${gradle.pushVersion}"
     implementation 'com.google.code.gson:gson:2.8.6'
 
+    // Optional: vendor channel bridge and individual OEM adapters.
+    // Remove unused vendors to reduce size and logs.
     api "com.aliyun.ams:alicloud-android-third-push:${gradle.thirdPushVersion}"
-    api "com.aliyun.ams:alicloud-android-third-push-meizu:${gradle.thirdPushVersion}"
+    api "com.aliyun.ams:alicloud-android-third-push-meizu:${gradle.thirdPushVersion}" //not a target store
     api "com.aliyun.ams:alicloud-android-third-push-vivo:${gradle.thirdPushVersion}"
     api "com.aliyun.ams:alicloud-android-third-push-oppo:${gradle.thirdPushVersion}"
     api "com.aliyun.ams:alicloud-android-third-push-xiaomi:${gradle.thirdPushVersion}"
     api "com.aliyun.ams:alicloud-android-third-push-huawei:${gradle.thirdPushVersion}"
-    api "com.aliyun.ams:alicloud-android-third-push-honor:${gradle.thirdPushVersion}"
-    api "com.aliyun.ams:alicloud-android-third-push-fcm:${gradle.thirdPushVersion}"
+    api "com.aliyun.ams:alicloud-android-third-push-honor:${gradle.thirdPushVersion}" //not a target store
+    api "com.aliyun.ams:alicloud-android-third-push-fcm:${gradle.thirdPushVersion}" //not a target store
 
 }

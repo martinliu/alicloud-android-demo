@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <!-- Application Settings -->
     <application
@@ -17,18 +18,22 @@
         android:theme="@style/AppTheme">
 
         <!-- 请填写你自己的- appKey EMASDemo空间 23793506 -->
+        <!-- Please fill in your own appKey (EMASDemo space 23793506). -->
         <meta-data
             android:name="com.alibaba.app.appkey"
-            android:value="XXX" />
+            android:value="335644007" />
         <!-- 请填写你自己的appSecret -->
+        <!-- Please fill in your own appSecret. -->
         <meta-data
             android:name="com.alibaba.app.appsecret"
-            android:value="XXX" />
+            android:value="b9d50489821f45ca9ed10e3326d65a25" />
         <!--huawei厂商通道参数配置-->
+        <!-- Huawei vendor channel parameter configuration. -->
         <meta-data
             android:name="com.huawei.hms.client.appid"
             android:value="appid=XXXXX" />
         <!--vivo厂商通道参数配置-->
+        <!-- vivo vendor channel parameter configuration. -->
         <meta-data
             android:name="com.vivo.push.api_key"
             android:value="XXXXX" />
@@ -36,6 +41,7 @@
             android:name="com.vivo.push.app_id"
             android:value="XXXXX" />
         <!--荣耀厂商通道配置-->
+        <!-- Honor vendor channel configuration. -->
         <meta-data
             android:name="com.hihonor.push.app_id"
             android:value="XXX" />
@@ -77,7 +83,9 @@
             android:exported="true"
             android:launchMode="singleInstance">
             <!-- 假设 ThirdPushPopupActivity 是用于接收厂商通道推送数据的辅助弹窗  -->
+            <!-- Assume ThirdPushPopupActivity is a helper popup used to receive vendor channel push data. -->
             <!-- scheme 配置开始  -->
+            <!-- scheme configuration start -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -90,6 +98,7 @@
                     android:scheme="agoo" />
             </intent-filter>
             <!-- scheme 配置结束  -->
+            <!-- scheme configuration end -->
         </activity>
 
         <activity
@@ -99,6 +108,7 @@
             android:launchMode="singleInstance">
 
             <!-- scheme 配置开始  -->
+            <!-- scheme configuration start -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -111,6 +121,7 @@
                     android:scheme="agoo" />
             </intent-filter>
             <!-- scheme 配置结束  -->
+            <!-- scheme configuration end -->
         </activity>
 
 
