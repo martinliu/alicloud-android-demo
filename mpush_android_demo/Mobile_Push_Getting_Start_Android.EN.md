@@ -1,4 +1,4 @@
-# EMAS Console for Mobile Development Platform
+# Getting Start Guide for Android
 
 ## **Preface**
 
