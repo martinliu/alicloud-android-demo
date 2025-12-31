@@ -21,12 +21,12 @@
         <!-- Please fill in your own appKey (EMASDemo space 23793506). -->
         <meta-data
             android:name="com.alibaba.app.appkey"
-            android:value="335644007" />
+            android:value="335644434" />
         <!-- 请填写你自己的appSecret -->
         <!-- Please fill in your own appSecret. -->
         <meta-data
             android:name="com.alibaba.app.appsecret"
-            android:value="b9d50489821f45ca9ed10e3326d65a25" />
+            android:value="a49af75b66ab4d808818d9693ef99ba7" />
         <!--huawei厂商通道参数配置-->
         <!-- Huawei vendor channel parameter configuration. -->
         <meta-data

@@ -10,7 +10,7 @@ Alibaba Cloud Enterprise Mobile Application Studio (EMAS) is a one-stop applicat
 
 ```bash
   git clone https://github.com/martinliu/alicloud-android-demo.git
-``
+```
 
 2. **Choose a product demo**
 

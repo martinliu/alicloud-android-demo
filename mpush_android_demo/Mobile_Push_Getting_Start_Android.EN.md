@@ -1,4 +1,4 @@
-# Getting Start Guide for Android
+# Mobile Push Android Quick Integration Guide
 
 ## **Preface**
 
